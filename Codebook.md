@@ -19,7 +19,7 @@ This identifies the activity the subject was performing for that observation. Th
 
 ## Measurements
 Only the mean and standard deviation (std) signals were extracted. These are the signals with "mean()" and "std()" in their variable names. 
-The first term in the signal names identifies the signal. The second term identifies if it is a mean or standard deviation measurement. The third term gives the direction of measurement, if applicable, on the X, Y and Z plane. 
+The first term in the signal names identifies the signal. The second term identifies if it is a mean or standard deviation measurement. The third term, if present, gives the direction of measurement on the X, Y and Z plane. 
 ###Frequency domain signals
 * fBodyAcc mean X
 * fBodyAcc mean Y
