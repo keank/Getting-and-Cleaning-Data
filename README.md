@@ -1,5 +1,5 @@
 # Getting-and-Cleaning-Data
-Getting and Cleaning Data Course Assignment
+##Getting and Cleaning Data Course Assignment
 
 This is my Course Project submission for the Getting and Cleaning Data course. 
 
@@ -16,3 +16,5 @@ Find listed:
   
 *  This README file
 *  A Codebook
+
+To load tidydat.txt in R, please use read.table("tidydat.txt",header=TRUE).
