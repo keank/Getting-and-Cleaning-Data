@@ -1,8 +1,9 @@
 ##basic setup
-library(dplyr)
+install.packages("reshape2")
 library(reshape2)
 
 ##imports data
+setwd("./UCI HAR Dataset") #this enters the Samsung data folder which should be in your working directory
 testXdat<-read.table("./test/X_test.txt")
 testYdat<-read.table("./test/Y_test.txt")
 
@@ -28,6 +29,7 @@ colnames(Xdatreq)<-gsub("\\(\\)","",colnames(Xdatreq))
 ##labels activity names
 activitynames<-read.table("./activity_labels.txt")
 activitynames<-activitynames[,2]
+activitynames<-gsub("_"," ",activitynames)
 yfac<-factor(Ydat$V1, levels=c(1,2,3,4,5,6), labels=activitynames)
 
 ##merges the activity names and the mean and std statistics
@@ -61,4 +63,4 @@ colnames(datl)[68]='subject'
 var<-colnames(datl)[2:67]
 datlmelt<-melt(datl,id=c('subject','activity'),measure.vars=var)
 tidydat<-dcast(datlmelt,subject+activity~var, mean)
-#write.table(tidydat, file="./tidydat.txt", row.names=FALSE) #use to write to txt file
+write.table(tidydat, file="./tidydat.txt", row.names=FALSE) #writes tidy dat to the UCI DAR Dataset folder
