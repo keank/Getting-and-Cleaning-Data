@@ -18,7 +18,7 @@ This is my Course Project submission for the Getting and Cleaning Data course.
 *  A Codebook
 
 ###Loading Tidy Data Set
-To load tidydat.txt in R, please use read.table("tidydat.txt",header=TRUE).
+To load tidydat.txt in R, please use read.table(header=TRUE).
 
 ###Tidiness of Dataset
 The dataset, tidydat.txt, is tidy as per the discussion in https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/. The final form is wide and gives the average of each variable for each combination of the identifiers *subject* and *activity*.
